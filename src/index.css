@@ -55,15 +55,21 @@ p {
   font-size: 16px;
   color: #222222;
 }
-
+/* MAIN CONTENT CONTAINER */
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 36px;
+}
 /* CARD */
 .card {
-  margin: 36px;
   position: relative;
   width: 176px;
 }
 .card--picture {
   width: 100%;
+  height: 235px;
   border-radius: 9px;
 }
 .card--rating {
