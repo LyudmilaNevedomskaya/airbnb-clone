@@ -3,9 +3,17 @@ import React from "react";
 //import star from '../img/Star.png'
 
 export default function Card(props) {
+  let badgeText;
+  if (props.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.country === "Online") {
+    badgeText = "ONLINE";
+  } else {
+    badgeText = ''
+  }
   return (
     <div className="card">
-      <div className="card--status">sold out</div>
+      {badgeText !== '' && <div className="card--status">{badgeText}</div>}
       <img className="card--picture" src={require(`../images/${props.img}`)} alt=""/>
       <div className="card--rating">
         <img src={require('../images/Star.png')} alt="" width="14px" height="14px"/>
